@@ -1,35 +1,56 @@
-footer
-    position: relative
-    padding-bottom: 40px
+.footer
+    background-color: #1A1918
+    color: white
+    padding: 24px 0
+
+    .btn
+        width: 100%
+
+    .col
+        width: 100%
+
     .logo
         display: block
-        height: 44px
-    .head
-        max-width: 62px
-        display: inline-block
-    a
-        text-decoration: none
+        margin-bottom: 12px
 
-    .soc
-        padding: 30px 0 0
+    &__text
+        font-size: 12px
+
+    &__heading
+        font-size: 14px
+        margin: 16px 0 12px
+
+    form
+        display: none
+
+    nav
+        max-width: 150px
         a
-            padding: 0 5px
-            display: inline-block
-        img
-            max-width: 30px
-
-    @media screen and ( max-width: 1000px )
-        padding-bottom: 10px
-        .wrap
+            font-size: 12px
             display: block
+            text-decoration: none
+            padding: 8px 0
+
+    @media screen and ( min-width: 700px )
+        .wrap
+            align-items: flex-start
 
         .col
-            margin-bottom: 20px
+            width: unset
+            max-width: 32%
 
-    @media screen and ( max-width: 700px )
-        .head
-            max-width: 105px
+        nav
+            min-width: 150px
 
-        .col
-            &:first-child
-                text-align: center
+    @media screen and ( min-width: 1000px )
+        padding: 100px 0
+        form 
+            display: block
+            p 
+                margin-bottom: 16px
+        &__heading
+            font-size: 20px
+            margin-top: 0
+        &__text
+            margin-bottom: 48px
+            font-size: 16px

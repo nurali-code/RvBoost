@@ -5,7 +5,7 @@
     border: none
     outline: none
 
-$black: #000
+$black: #1A1918
 $yelow: #ffcc0046
 $third: #3C84AB
 $second: #85CDFD
@@ -13,9 +13,9 @@ $prime: #6620FF
 
 body
     min-height: 100vh
-    color: #000
+    color: $black
     font-size: 14px
-    background-color: #fff
+    background-color: #F6F6F6
     font-family: 'Roboto', sans-serif
     scroll-behavior: smooth
     position: relative
@@ -102,6 +102,10 @@ section
     background-color: $prime
     border-radius: 8px
     width: 100%
+    img 
+        display: inline-block
+        vertical-align: middle
+        margin-left: 6px
     &-menu
         z-index: 9999
         display: inline-block
@@ -195,7 +199,7 @@ select
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05)
     margin-bottom: 12px
     &::placeholder
-        color: rgba(#000 , .6)
+        color: rgba($black , .6)
         font-weight: 300
 
 select
@@ -212,21 +216,39 @@ select
 .nowrap
     white-space: nowrap
 
-@media screen and ( min-width: 1150px )
-    .container
-        max-width: 1120px
+@media screen and ( min-width: 700px )
+    h1
+        font-size: 46px
 
 @media screen and ( min-width: 1000px )
+
+    h2
+        font-size: 48px
+        margin-bottom: 48px
+
+    ol, ul
+        padding: 0 0 24px 24px
+        li
+            font-size: 20px
+
+    .btn
+        width: unset
+        padding: 16px 32px 15px
+        font-size: 18px
+        &.lg
+            padding: 24px 48px
+            font-size: 32px
+
+    section
+        padding: 100px 0
+
+@media screen and ( min-width: 1100px )
     h1
         font-size: 54px
         img
             height: 55px
 
-    .btn
-        &.lg
-            padding: 24px 48px
-            font-size: 32px
-
-
-@media screen and ( max-width: 700px )
-    
+@media screen and ( min-width: 1150px )
+    .container
+        max-width: 1120px
+        padding: 0

@@ -1,17 +1,18 @@
 @import 'normolize'
 @import 'elements'
 @import 'header'
-@import 'modal'
+// @import 'modal'
 
 .main
-    padding-bottom: 77px
     color: #fff
     position: relative
     z-index: 1
+    padding: 77px 0
     margin-bottom: 32px
-    &-content
+    .container
         max-width: 800px
         margin: 0 auto
+
     p
         margin-bottom: 32px
 
@@ -30,7 +31,7 @@
     .btn
         width: 100%
 
-    &__bg 
+    &__bg
         position: absolute
         top: 0
         left: 0
@@ -41,22 +42,204 @@
         pointer-events: none
 
 .how
-    .container 
+    .container
         max-width: 400px
-        
-    h2 
+
+    h2
         margin-bottom: 12px
 
-    .img 
+    &-img
         width: 65%
         max-width: 250px
         margin: 0 auto 24px
+        img 
+            display: block
+            width: 100%
 
+.products
+    text-align: center
+
+.product
+    display: inline-block
+    vertical-align: middle
+    width: 265px
+    position: relative
+    z-index: 1
+    text-align: center
+    &__tag
+        display: inline-block
+        text-align: center
+        padding: 4px 4px 3px 22px
+        background-repeat: no-repeat
+        background-position: center left 4px
+        background-size: 14px auto
+        background-image: url('../img/money-tag.svg')
+        font-size: 12px
+        color: #F6F6F6
+        border-radius: 6px
+        background-color: $black
+        position: absolute
+        top: 8px
+        left: 8px
+        text-transform: uppercase
+    &__img
+        display: block
+        width: 100%
+        aspect-ratio: 1/1
+        border-radius: 10px
+        margin: 0 0 16px
+
+    &__heading
+        font-size: 16px
+        font-weight: 700
+        margin: 0 0 4px
+
+    &__price
+        font-size: 16px
+        font-style: normal
+        font-weight: 700
+        color: #B4B4B4
+        strong, b
+            color: $black
+            margin-right: 6px
+
+.faq
+    h2
+        text-align: center
+
+.dropdown
+    max-width: 708px
+    margin: 0 auto 10px
+    padding: 0 16px
+    border-bottom: 2px solid #B4B4B4
+    &__btn
+        padding: 16px 28px 16px 0
+        width: 100%
+        text-align: left
+        display: block
+        color: $black
+        position: relative
+        font-size: 14px
+        font-weight: bold
+        &::after
+            width: 16px
+            height: 16px
+            font-weight: normal
+            line-height: 16px
+            font-size: 29px
+            position: absolute
+            right: 0
+            top: 50%
+            margin-top: -8px
+            content: '+'
+            display: inline-block
+            text-align: center
+            transition: all .3s ease
+
+        &.active
+            &::after
+                content: '–'
+                transform: rotate(180deg)
+
+    &-content
+        padding: 0 0 16px
+        display: none
+
+.review
+    width: 46.67%
+    display: inline-block
+    background: #FFF
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
+    &__img
+        display: block
+        width: 100%
+        aspect-ratio: 4/5
+        object-fit: cover
+
+    &-content
+        padding: 8px 12px
+
+    &__heading
+        font-size: 12px
+
+    &__text
+        font-size: 10px
+
+    &__rating
+        display: block
+        width: 100px
+        margin: 8px 0
+
+    &-footer
+        border-top: 2px solid #B4B4B4
+        padding: 12px
+        line-height: 115%
+        flex-wrap: nowrap
+        justify-content: flex-start
+        font-size: 8px
+        gap: 4px
+        img
+            min-width: 24px
+            width: 24px
+            width: 24px
+            display: block
+
+.reviews
+    h2
+        color: $black
+        font-size: 20px
+        img
+            width: 180px
+            margin: 0
+            display: inline-block
+            vertical-align: middle
+
+        span
+            display: inline-block
+            vertical-align: middle
+
+    &-wrap
+        gap: 20px 0
+        margin-bottom: 64px
+
+    &-info
+        text-align: center
+        &__item
+            width: 100%
+            max-width: 330px
+            margin: 0 auto 24px
+            font-size: 16px
+            img
+                display: block
+                width: 54px
+                height: 54px
+                border-radius: 50%
+                margin: 0 auto 12px
+
+@media screen and ( min-width: 600px )
+    .dropdown
+        &__btn
+            font-size: 16px
+
+    .reviews
+        &-wrap
+            justify-content: flex-start
+            gap: 20px 3.5%
+            margin-bottom: 120px
+
+    .review
+        width: 31%
 
 @media screen and ( min-width: 1000px )
     .main
-        &-content
-            max-width: 100%
+        min-height: 500px
+        height: 100vh
+        max-height: 1180px
+        padding: 120px 0 40px
+        display: flex
+        margin-bottom: 100px
+        .container
+            max-width: 1120px
             flex-direction: row-reverse
 
         &-title
@@ -66,10 +249,44 @@
             max-width: 500px
             margin: 0
 
-        p 
+        p
             font-size: 24px
 
         .btn
             width: unset
+
+    .how
+        .container
+            flex-direction: row-reverse
+            max-width: 1120px
+        p
+            font-size: 20px
+
+        &-img
+            max-width: 381px
+
+    .reviews
+        &-wrap
+            justify-content: flex-start
+            gap: 20px 1.76%
+
+    .review
+        width: 23.67%
+        &-content
+            padding: 12px 16px
+        &__heading
+            font-size: 16px
+        &__rating
+            margin: 8px 0
+            width: 100px
+        &__text
+            font-size: 16px
+        &-footer
+            padding: 12px 15px 12px 16px
+            font-size: 16px
+            gap: 8px
+            img
+                width: 48px
+                height: 48px
 
 @import 'footer'

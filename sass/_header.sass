@@ -2,9 +2,12 @@ header
     padding: 16px 0
     z-index: 9999
     margin-bottom: 40px
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
 
     .container
-        width: 80%
         position: static
 
     .nav
@@ -25,7 +28,7 @@ header
             position: fixed
             min-width: 60%
             height: 100%
-            padding: 100px 48px 48px
+            padding: 100px 18px 48px
             top: 0
             left: 0
             z-index: 1
@@ -36,13 +39,15 @@ header
             transition: all ease .3s
             &__item
                 display: block
+                padding: 12px 30px
 
             &.actives 
                 visibility: visible
                 opacity: 1
                 transform: translate(0)
         
-
+    .logo
+        width: 125px
 
     .language__btn,
     .cart__btn
@@ -52,10 +57,14 @@ header
             width: 24px
 
     @media screen and ( min-width: 700px )
+        .logo 
+            width: 170px
+
         .btn 
             &-menu 
                 display: none
-        .nav 
+        
+         
 
         
 
