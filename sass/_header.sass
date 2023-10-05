@@ -1,0 +1,75 @@
+header
+    padding: 16px 0
+    z-index: 9999
+    margin-bottom: 40px
+
+    .container
+        width: 80%
+        position: static
+
+    .nav
+        &__item
+            display: block
+            display: inline-block
+            color: white
+            padding: 12px
+            text-decoration: none
+            font-size: 16px
+            font-weight: 500
+            &:hover,
+            &.active
+                color: #7D7D7D
+                opacity: 1
+
+        @media screen and ( max-width: 700px )
+            position: fixed
+            min-width: 60%
+            height: 100%
+            padding: 100px 48px 48px
+            top: 0
+            left: 0
+            z-index: 1
+            background-color: #080808
+            opacity: 0
+            visibility: hidden
+            transform: translateX(-100%)
+            transition: all ease .3s
+            &__item
+                display: block
+
+            &.actives 
+                visibility: visible
+                opacity: 1
+                transform: translate(0)
+        
+
+
+    .language__btn,
+    .cart__btn
+        padding: 8px
+        img
+            display: block
+            width: 24px
+
+    @media screen and ( min-width: 700px )
+        .btn 
+            &-menu 
+                display: none
+        .nav 
+
+        
+
+.language
+    position: relative
+    z-index: 1
+    &-form
+        display: none
+        position: absolute
+        top: 100%
+        left: 0
+        width: 320px
+        padding: 24px
+        border-radius: 10px
+        background: #FFF
+    .btn
+        width: 100%
