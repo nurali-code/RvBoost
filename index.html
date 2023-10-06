@@ -175,43 +175,43 @@
         <div class="container wrap">
             <div class="card-left">
                 <div class="card-img">
-                    <picture>
+                    <picture class="card-img__item active" data-product-img="product_1">
                         <source srcset="img/product.webp" type="image/webp">
-                        <img src="img/product.jpg" class="card-img__item active" loading="lazy" alt="Google reviews">
+                        <img src="img/product.jpg" loading="lazy" alt="Google reviews">
                     </picture>
-                    <picture>
+                    <picture class="card-img__item" data-product-img="product_2">
                         <source srcset="img/product-2.webp" type="image/webp">
-                        <img src="img/product-2.jpg" class="card-img__item" loading="lazy" alt="Google reviews">
+                        <img src="img/product-2.jpg" loading="lazy" alt="Google reviews">
                     </picture>
-                    <picture>
-                        <source srcset="img/product-2.webp" type="image/webp">
-                        <img src="img/product-2.jpg" class="card-img__item" loading="lazy" alt="Google reviews">
+                    <picture class="card-img__item" data-product-img="product_3">
+                        <source srcset="img/product.webp" type="image/webp">
+                        <img src="img/product.jpg" loading="lazy" alt="Google reviews">
                     </picture>
-                    <picture>
+                    <picture class="card-img__item" data-product-img="product_4">
                         <source srcset="img/product-2.webp" type="image/webp">
-                        <img src="img/product-2.jpg" class="card-img__item" loading="lazy" alt="Google reviews">
+                        <img src="img/product-2.jpg" loading="lazy" alt="Google reviews">
                     </picture>
                 </div>
                 <div class="card-nav wrap">
-                    <button class="card-nav__item">
+                    <button class="card-nav__item active" data-product="product_1">
                         <picture>
                             <source srcset="img/product.webp" type="image/webp">
                             <img src="img/product.jpg" loading="lazy" alt="Google reviews">
                         </picture>
                     </button>
-                    <button class="card-nav__item">
+                    <button class="card-nav__item" data-product="product_2">
                         <picture>
                             <source srcset="img/product-2.webp" type="image/webp">
                             <img src="img/product-2.jpg" loading="lazy" alt="Google reviews">
                         </picture>
                     </button>
-                    <button class="card-nav__item">
+                    <button class="card-nav__item" data-product="product_3">
                         <picture>
                             <source srcset="img/product.webp" type="image/webp">
                             <img src="img/product.jpg" loading="lazy" alt="Google reviews">
                         </picture>
                     </button>
-                    <button class="card-nav__item">
+                    <button class="card-nav__item" data-product="product_4">
                         <picture>
                             <source srcset="img/product-2.webp" type="image/webp">
                             <img src="img/product-2.jpg" loading="lazy" alt="Google reviews">
@@ -225,25 +225,25 @@
                 <p class="card__subheading">Select your offer:</p>
                 <form action="#">
                     <fieldset class="inp-radio">
-                        <input type="radio" required value="5 RvBoost Google Cards" name="product" id="product_1">
-                        <label class="label" for="product_1">
+                        <input type="radio" checked required value="5 RvBoost Google Cards" name="product" id="product_1">
+                        <label class="label" for="product_1" data-product="product_1">
                             <span class="descr">Best Offer!</span>
                             <span class="heading">5 RvBoost Google Cards <span class="nowrap">+ FREE
                                     SHIPPING</span></span>
-                            <span class="price"><b>$82.99</b> $199.99</span>
+                            <span class="price"><b>$52.99</b> $299.99</span>
                         </label>
                     </fieldset>
                     <fieldset class="inp-radio">
                         <input type="radio" value="3 RvBoost Google Cards" name="product" id="product_2">
-                        <label class="label" for="product_2">
+                        <label class="label" for="product_2" data-product="product_2">
                             <span class="heading">3 RvBoost Google Cards <span class="nowrap">+ FREE
                                     SHIPPING</span></span>
-                            <span class="price"><b>$82.99</b> $199.99</span>
+                            <span class="price"><b>$52.99</b> $522.99</span>
                         </label>
                     </fieldset>
                     <fieldset class="inp-radio">
                         <input type="radio" value="1 RvBoost Google Card" name="product" id="product_3">
-                        <label class="label" for="product_3">
+                        <label class="label" for="product_3" data-product="product_3">
                             <span class="heading">1 RvBoost Google Card <span class="nowrap">+ FREE
                                     SHIPPING</span></span>
                             <span class="price"><b>$82.99</b> $199.99</span>
@@ -252,10 +252,10 @@
                     <fieldset class="inp-radio">
                         <input type="radio" value="BONUS PACK : 9 + 1 FOR FREE RvBoost Cards" name="product"
                             id="product_4">
-                        <label class="label" for="product_4">
+                        <label class="label" for="product_4" data-product="product_4">
                             <span class="heading">BONUS PACK : 9 + 1 FOR FREE RvBoost Cards <span class="nowrap">+ FREE
                                     SHIPPING</span></span>
-                            <span class="price"><b>$82.99</b> $199.99</span>
+                            <span class="price"><b>$45.99</b> $141.99</span>
                         </label>
                     </fieldset>
                     <button type="submit" class="btn">Buy Now <img src="img/shopping-cart.svg" alt="cart"></button>

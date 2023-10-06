@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $('.btn-menu').on('click', function () {
         $('body, .nav, .btn-menu').toggleClass('active');
-    })
+    });
 
     $(document).on('click', function (e) {
         if (!(($(e.target).parents('.modal-content').length) ||
@@ -15,8 +15,8 @@ $(document).ready(function () {
         )) { $('body, .nav, .btn-menu, .language-form').removeClass('active'); }
     });
 
-
     /*---------------------------------------------------end*/
+
     $('.products-slider').slick({
         infinite: true,
         dots: true,
@@ -24,6 +24,8 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 1,
         centerPadding: '10px',
+        autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -45,9 +47,32 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
+    
+    function productSelect(item) {
+        var cardHeading = $('.card__heading'),
+        cardPrice = $('.card__price'),
+            cardtValue = $(item).attr('data-product');
+
+            $('[data-product-img').hide();
+        $('[data-product-img="' + cardtValue + '"]').fadeIn();
+        $(item).hasClass('label') ? textReplace($(item)) : textReplace($('[for="' + cardtValue + '"]'));
+        
+        function textReplace(parent) {
+            $('[for]').prop('checked', false);
+            parent.prev().prop('checked', true);
+            cardHeading.text(parent.find('.heading').text());
+            cardPrice.html(parent.find('.price').html())
+        }
+    }
+    productSelect($('.card-nav__item.active'));
+    $('[data-product]').on('click', function (e) { productSelect(this); })
+
+
+    /*---------------------------------------------------end*/
+
     $('.language__btn').on('click', function () {
         $(this).next().toggleClass('active');
-    })
+    });
 
     /*---------------------------------------------------end*/
 
@@ -65,8 +90,7 @@ $(document).ready(function () {
             $('.dropdown__btn').removeClass('active').next().slideUp();
             $(this).toggleClass('active').next().slideToggle();
         }
-    })
-
+    });
 
 
 });
