@@ -12,7 +12,6 @@ $(document).ready(function () {
         }
     });
 
-
     /*---------------------------------------------------end*/
 
     $('.products-slider').slick({
@@ -45,7 +44,6 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
-
     function productSelect(item) {
         var cardHeading = $('.card__heading'),
             cardPrice = $('.card__price'),
@@ -74,21 +72,23 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
-    setTimeout(() => { $('.present').addClass('active') }, 20000);
-
-    var timer,
-        added = false;
-    function toggleShowClass() {
-        $('.purchase').addClass('active', added = true);
-        setTimeout(() => { $('.purchase').removeClass('active') }, 10000);
-    }
-    $('.purchase__close').on('click', () => { $('.purchase').removeClass('active'); })
-    $(document).on('mousemove', () => {
-        if (!added) {
-            clearTimeout(timer);
-            timer = setTimeout(toggleShowClass, 10000);
+    if (window.innerWidth >= 1000) {
+        setTimeout(() => { $('.present').addClass('active') }, 20000);
+        var timer,
+            added = false;
+        function toggleShowClass() {
+            $('.purchase').addClass('active', added = true);
+            setTimeout(() => { $('.purchase').removeClass('active') }, 10000);
         }
-    });
+        $('.purchase__close').on('click', () => { $('.purchase').removeClass('active'); })
+        $(document).on('mousemove', () => {
+            if (!added) {
+                clearTimeout(timer);
+                timer = setTimeout(toggleShowClass, 10000);
+            }
+        });
+
+    }
 
     /*---------------------------------------------------end*/
 
@@ -109,7 +109,6 @@ $(document).ready(function () {
         $('.modal__close, .modal__cancel').on('click', () => { hideModals(); });
 
     });
-
 
     /*---------------------------------------------------end*/
 
