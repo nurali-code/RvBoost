@@ -75,7 +75,7 @@ ol, ul
 
 p
     font-size: 14px
-    line-height: 120%
+    line-height: 130%
 
 img
     max-width: 100%
@@ -232,9 +232,6 @@ select
 .inp
     &-radio
         position: relative
-        border: none
-        margin: 0
-        padding: 0
         margin-bottom: 12px
 
         label
@@ -270,7 +267,7 @@ select
             width: 24px
             height: 24px
             position: absolute
-            background-color: red
+            opacity: 0
             &:checked ~ label
                 background-color: $prime
                 color: white
@@ -289,6 +286,46 @@ select
         .heading
             font-weight: 700
             margin: 0 0 8px
+
+    &-checkbox
+        position: relative
+        margin-bottom: 16px
+        label
+            font-size: 16px
+            display: block
+            padding: 0 0 0 32px
+            position: relative
+            z-index: 1
+            transition: all ease .3s
+            cursor: pointer
+            &::after
+                content: ''
+                display: block
+                width: 20px
+                height: 20px
+                box-sizing: border-box
+                border-radius: 6px
+                border: 1px solid #B4B4B4
+                background: #F6F6F6
+                position: absolute
+                left: 0
+                top: 50%
+                margin-top: -10px
+                transition: all ease .3s
+        input
+            position: absolute
+            left: 0
+            top: 50%
+            margin-top: -12px
+            width: 20px
+            height: 20px
+            position: absolute
+            opacity: 0
+            &:checked ~ label
+                &::after
+                    background-color: $prime
+                    border-color: white
+                    border-width: 3px
 
 @media screen and ( min-width: 700px )
     h1

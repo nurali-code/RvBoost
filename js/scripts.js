@@ -5,19 +5,13 @@ $(document).ready(function () {
     });
 
     $(document).on('click', function (e) {
-        if (!(($(e.target).parents('.modal-content').length) ||
-            ($(e.target).parents('.btn-menu').length) ||
-            ($(e.target).parents('.language-form').length) ||
-            ($(e.target).hasClass('btn-menu')) ||
-            ($(e.target).hasClass('language__btn')) ||
-            ($(e.target).hasClass('present')) ||
-            ($(e.target).hasClass('cat-item')) ||
-            ($(e.target).hasClass('modal-content'))
-        )) {
+        const selectors = ['.modal-content', '.btn-menu', '.language-form', '.nav', '.language__btn', '.present', '.cat-item'];
+        if (!selectors.some(selector => $(e.target).is(selector) || $(e.target).parents(selector).length)) {
             $('body, .nav, .btn-menu, .language-form').removeClass('active');
             hideModals();
         }
     });
+
 
     /*---------------------------------------------------end*/
 

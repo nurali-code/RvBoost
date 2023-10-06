@@ -31,7 +31,7 @@ header
             position: fixed
             min-width: 60%
             height: 100%
-            padding: 100px 18px 48px
+            padding: 100px 8px 48px
             top: 0
             left: 0
             z-index: 1
@@ -42,7 +42,17 @@ header
             transition: all ease .3s
             &__item
                 display: block
-                padding: 12px 30px
+                font-weight: bold
+                padding: 12px 40px
+
+            .hidden
+                padding-top: 10px
+                a 
+                    font-size: 14px
+                    font-weight: normal
+                    padding: 4px 40px
+
+
 
             &.active
                 visibility: visible
@@ -66,6 +76,10 @@ header
 
         .btn
             &-menu
+                display: none
+
+        .nav 
+            .hidden
                 display: none
 
 .language
