@@ -11,6 +11,18 @@ $third: #3C84AB
 $second: #85CDFD
 $prime: #6620FF
 
+@font-face
+    font-family: 'Roboto'
+    src: url('../fonts/Roboto-Bold.woff') format('woff')
+    font-weight: bold
+    font-style: normal
+
+@font-face
+    font-family: 'Roboto'
+    src: url('../fonts/Roboto-Regular.woff') format('woff')
+    font-weight: 400
+    font-style: normal
+
 body
     min-height: 100vh
     color: $black
@@ -233,6 +245,7 @@ select
             padding: 16px 32px 16px 67px
             position: relative
             z-index: 1
+            transition: all ease .3s
             cursor: pointer
             &::after
                 content: ''
@@ -247,6 +260,7 @@ select
                 left: 32px
                 top: 50%
                 margin-top: -12px
+                transition: all ease .3s
 
         input
             position: absolute
@@ -306,8 +320,13 @@ select
 
     .inp
         &-radio
+            transition: transform .3s ease
+            label
             .heading
                 font-size: 20px
+
+            &:hover
+                transform: scale(1.02)
 
 @media screen and ( min-width: 1100px )
     h1
