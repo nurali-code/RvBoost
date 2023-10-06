@@ -52,9 +52,61 @@
         width: 65%
         max-width: 250px
         margin: 0 auto 24px
-        img 
+        img
             display: block
             width: 100%
+
+.card
+    .btn
+        width: 100%
+        font-size: 20px
+    .container
+        max-width: 550px
+
+    &-left
+        margin-bottom: 12px
+
+    &-img
+        img
+            width: 100%
+            height: 100%
+            border-radius: 10px
+            margin-bottom: 12px
+        &__item
+            display: none
+            aspect-ratio: 1/1
+
+            &.active
+                display: block
+
+    &-nav
+        flex-wrap: nowrap
+        &__item
+            width: 23%
+            aspect-ratio: 1/1
+
+        img
+            display: block
+            width: 100%
+            height: 100%
+            border-radius: 8px
+
+
+    &__heading
+        font-size: 20px
+        color: $black
+        margin-bottom: 12px
+
+    &__price
+        font-size: 20px
+        font-weight: 700
+        margin-bottom: 12px
+        color: #B4B4B4
+        b
+            color: $black
+
+    &__subheading
+        margin-bottom: 24px
 
 .products
     text-align: center
@@ -264,6 +316,23 @@
 
         &-img
             max-width: 381px
+
+    .card
+        &-left,
+        &-right
+            width: 49%
+        .container
+            max-width: 1120px
+
+        &__heading
+            font-size: 32px
+        &__price
+            font-size: 20px
+        &__subheading
+            font-size: 12px
+
+        .btn
+            font-size: 24px
 
     .reviews
         &-wrap

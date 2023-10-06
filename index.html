@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ape Society - A Generative Cardano NFT Project & Community</title>
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link rel="icon" type="image/svg" href="/favicon.svg">
+    <link rel="icon" type="image/svg" href="./favicon.svg">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,10 +23,10 @@
             <button class="btn-menu"><span></span></button>
             <img src="img/logo.svg" class="logo" alt="RvBoost logo">
             <nav class="nav">
-                <a href="#" class="nav__item active">Home</a>
-                <a href="#" class="nav__item">Shop</a>
-                <a href="#" class="nav__item">About</a>
-                <a href="#" class="nav__item">FAQs</a>
+                <a href="#home" class="nav__item">Home</a>
+                <a href="#shop" class="nav__item">Shop</a>
+                <a href="#about" class="nav__item">About</a>
+                <a href="#faqs" class="nav__item">FAQs</a>
             </nav>
             <div class="wrap">
                 <div class="language">
@@ -48,7 +48,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="home">
         <div class="container wrap">
             <div class="main-img">
                 <picture>
@@ -76,7 +76,7 @@
         </picture>
     </main>
 
-    <section class="how">
+    <section class="how" id="about">
         <div class="container wrap">
             <div class="how-img">
                 <picture>
@@ -100,7 +100,7 @@
         </div>
     </section>
 
-    <section class="products">
+    <section class="products" id="shop">
         <div class="container">
             <h2>Discover Our Products</h2>
             <div class="products-slider">
@@ -140,7 +140,100 @@
         </div>
     </section>
 
-    <section class="faq">
+    <section class="card">
+        <div class="container wrap">
+            <div class="card-left">
+                <div class="card-img">
+                    <picture>
+                        <source srcset="img/product.webp" type="image/webp">
+                        <img src="img/product.jpg" class="card-img__item active" loading="lazy" alt="Google reviews">
+                    </picture>
+                    <picture>
+                        <source srcset="img/product-2.webp" type="image/webp">
+                        <img src="img/product-2.jpg" class="card-img__item" loading="lazy" alt="Google reviews">
+                    </picture>
+                    <picture>
+                        <source srcset="img/product-2.webp" type="image/webp">
+                        <img src="img/product-2.jpg" class="card-img__item" loading="lazy" alt="Google reviews">
+                    </picture>
+                    <picture>
+                        <source srcset="img/product-2.webp" type="image/webp">
+                        <img src="img/product-2.jpg" class="card-img__item" loading="lazy" alt="Google reviews">
+                    </picture>
+                </div>
+                <div class="card-nav wrap">
+                    <button class="card-nav__item">
+                        <picture>
+                            <source srcset="img/product.webp" type="image/webp">
+                            <img src="img/product.jpg" loading="lazy" alt="Google reviews">
+                        </picture>
+                    </button>
+                    <button class="card-nav__item">
+                        <picture>
+                            <source srcset="img/product-2.webp" type="image/webp">
+                            <img src="img/product-2.jpg" loading="lazy" alt="Google reviews">
+                        </picture>
+                    </button>
+                    <button class="card-nav__item">
+                        <picture>
+                            <source srcset="img/product.webp" type="image/webp">
+                            <img src="img/product.jpg" loading="lazy" alt="Google reviews">
+                        </picture>
+                    </button>
+                    <button class="card-nav__item">
+                        <picture>
+                            <source srcset="img/product-2.webp" type="image/webp">
+                            <img src="img/product-2.jpg" loading="lazy" alt="Google reviews">
+                        </picture>
+                    </button>
+                </div>
+            </div>
+            <div class="card-right">
+                <h2 class="card__heading">RvBoost Google Reviews</h2>
+                <p class="card__price"><b>$82.99</b> $199.99</p>
+                <p class="card__subheading">Select your offer:</p>
+                <form action="#">
+                    <fieldset class="inp-radio">
+                        <input type="radio" required value="5 RvBoost Google Cards" name="product" id="product_1">
+                        <label class="label" for="product_1">
+                            <span class="descr">Best Offer!</span>
+                            <span class="heading">5 RvBoost Google Cards <span class="nowrap">+ FREE
+                                    SHIPPING</span></span>
+                            <span class="price"><b>$82.99</b> $199.99</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="inp-radio">
+                        <input type="radio" value="3 RvBoost Google Cards" name="product" id="product_2">
+                        <label class="label" for="product_2">
+                            <span class="heading">3 RvBoost Google Cards <span class="nowrap">+ FREE
+                                    SHIPPING</span></span>
+                            <span class="price"><b>$82.99</b> $199.99</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="inp-radio">
+                        <input type="radio" value="1 RvBoost Google Card" name="product" id="product_3">
+                        <label class="label" for="product_3">
+                            <span class="heading">1 RvBoost Google Card <span class="nowrap">+ FREE
+                                    SHIPPING</span></span>
+                            <span class="price"><b>$82.99</b> $199.99</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="inp-radio">
+                        <input type="radio" value="BONUS PACK : 9 + 1 FOR FREE RvBoost Cards" name="product"
+                            id="product_4">
+                        <label class="label" for="product_4">
+                            <span class="heading">BONUS PACK : 9 + 1 FOR FREE RvBoost Cards <span class="nowrap">+ FREE
+                                    SHIPPING</span></span>
+                            <span class="price"><b>$82.99</b> $199.99</span>
+                        </label>
+                    </fieldset>
+                    <button type="submit" class="btn">Buy Now <img src="img/shopping-cart.svg" alt="cart"></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faqs">
         <div class="container">
             <h2>FAQ</h2>
             <div class="dropdown">

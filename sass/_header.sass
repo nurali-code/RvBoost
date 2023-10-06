@@ -3,9 +3,12 @@ header
     z-index: 9999
     margin-bottom: 40px
     position: absolute
+    // background-color: $black
     top: 0
     left: 0
     width: 100%
+
+    &.fixed
 
     .container
         position: static
@@ -41,7 +44,7 @@ header
                 display: block
                 padding: 12px 30px
 
-            &.actives 
+            &.active
                 visibility: visible
                 opacity: 1
                 transform: translate(0)
