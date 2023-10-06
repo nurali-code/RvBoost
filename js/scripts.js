@@ -17,6 +17,33 @@ $(document).ready(function () {
 
 
     /*---------------------------------------------------end*/
+    $('.products-slider').slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerPadding: '10px',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    centerMode: true,
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    variableWidth: true
+                }
+            },
+        ]
+    });
+
+    /*---------------------------------------------------end*/
 
     $('.language__btn').on('click', function () {
         $(this).next().toggleClass('active');

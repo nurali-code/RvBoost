@@ -103,7 +103,6 @@
         margin-top: -30px
         z-index: 100
         border: none
-        background-image: url('../img/slider-arrow.svg')
         background-repeat: no-repeat
         background-position: center center
         background-size: 60%
@@ -127,12 +126,11 @@
     
     &-dots
         display: block
-        position: absolute
         left: 0
         bottom: 0
         width: 100%
         text-align: center
-
+        padding: 40px 0
         li
             font-size: 0
             line-height: 0
@@ -144,17 +142,18 @@
                 display: none
 
         button
-            width: 12px
+            width: 14px
             border-radius: 50%
-            height: 12px
-            background-color: #BDBDBD
+            height: 14px
+            background-color: $black
+            border: 2px solid $black
             margin: 0
             padding: 0
             color: transparent
 
         .slick-active
             button
-                background-color: #fff
+                background-color: rgba(0, 0, 0, 0)
 
     @media screen and ( max-width: 1300px )
         &-arrow 
