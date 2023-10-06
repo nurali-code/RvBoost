@@ -47,16 +47,16 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
-    
+
     function productSelect(item) {
         var cardHeading = $('.card__heading'),
-        cardPrice = $('.card__price'),
+            cardPrice = $('.card__price'),
             cardtValue = $(item).attr('data-product');
 
-            $('[data-product-img').hide();
+        $('[data-product-img').hide();
         $('[data-product-img="' + cardtValue + '"]').fadeIn();
         $(item).hasClass('label') ? textReplace($(item)) : textReplace($('[for="' + cardtValue + '"]'));
-        
+
         function textReplace(parent) {
             $('[for]').prop('checked', false);
             parent.prev().prop('checked', true);
@@ -76,11 +76,27 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
+    $(document).one('mousemove', function () {
+        let timer;
+        let added = false;
+
+        function toggleShowClass() {
+            $('.purchase').toggleClass('active', added = !added);
+            added == false ? $('.purchase').remove() : false;
+        }
+        $(document).on('mousemove', () => {
+            clearTimeout(timer);
+            timer = setTimeout(toggleShowClass, 10000);
+        });
+    });
+    /*---------------------------------------------------end*/
+
     $('a[href*="#"]').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top, }, 300,)
     });
 
+    /*---------------------------------------------------end*/
     const dropdownFirst = $('.dropdown__btn')[0];
     $(dropdownFirst).toggleClass('active').next().slideToggle();
 
