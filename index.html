@@ -454,8 +454,8 @@
             <div class="col">
                 <h3 class="footer__heading">Quick Links</h3>
                 <nav>
-                    <a href="#">FAQs</a>
-                    <a href="#">About us</a>
+                    <a href="#faqs">FAQs</a>
+                    <a href="#about">About us</a>
                     <a href="#">Get in touch</a>
                     <a href="#">Blog</a>
                     <a href="#">Affiliate Program</a>
@@ -476,6 +476,28 @@
             <p class="purchase__time">1 hour(s) ago</p>
         </dib>
         <button class="purchase__close">&times;</button>
+    </div>
+
+    <button class="present wrap" data-modal="present" title="Подарок"><img src="img/present.svg" alt="present"></button>
+
+    <div class="modal" id="present">
+        <div class="modal-content">
+            <button class="modal__close">&times;</button>
+            <picture>
+                <source srcset="img/present.webp" type="image/webp">
+                <img src="img/present.jpg" loading="lazy" alt="Google reviews">
+            </picture>
+            <h3>
+                Supercharge Your Reviews & Get <br>
+                <mark>10% OFF</mark> <br>
+                Submit Your Email Below To See The Deal
+            </h3>
+            <form action="#">
+                <input type="email" placeholder="Your E-mail" required>
+                <button type="submit" class="btn">Get 10% Off</button>
+            </form>
+            <button class="modal__cancel">No thanks, I'd rather pay full price</button>
+        </div>
     </div>
 
     <script src="./js/jquery-3.4.1.min.js" defer></script>

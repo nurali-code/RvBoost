@@ -19,11 +19,11 @@
         left: 50%
         transform: translate(-50%, -50%)
         background-color: #fff
-        max-width: 530px
+        max-width: 670px
         color: $black
-        text-align: left
-        padding: 50px 
-        border-radius: 60px
+        text-align: center
+        padding: 48px
+        border-radius: 10px
         overflow-y: scroll
         -ms-overflow-style: none
         scrollbar-width: none
@@ -32,48 +32,44 @@
             width: 0
             height: 0
 
-        h3
-            
-            font-size: 28px
-            text-align: center
-            margin-bottom: 25px
+    h3
+        font-size: 20px
+        line-height: 200%
+        font-weight: 400
+        text-align: center
+        margin-bottom: 25px
 
-        p
-            margin: 0
+    mark
+        color: $prime
+        font-weight: bold
+        font-size: 48px
+        background-color: rgba(0, 0, 0, 0)
 
-        .wrap
-            margin-bottom: 10px
-            fieldset
-                width: 49%
-        
-        .mt 
-            margin-top: 10px
+    img 
+        max-width: 300px
 
-        .btn
-            margin-top: 5px
-            min-width: 48%
+    .btn
+        min-width: 100%
 
-        .inp-wrap
-            margin-bottom: 15px
-            width: 100%
-            input
-                margin: 0
+    form 
+        max-width: 455px
+        margin: 0 auto 24px
 
-    &-close
-        position: absolute
-        top: 22px
-        right: 32px
-        border-radius: 50%
-        font-size: 19px
-        background-color: rgba($black, .2)
+    &__cancel
         color: $black
-        line-height: 38px
-        width: 36px
-        height: 36px
+        font-size: 20px
 
-    &.active
-        visibility: visible
-        opacity: 1
+    &__close
+        position: absolute
+        width: 20px
+        height: 20px
+        line-height: 20px
+        background-color: #373F47B2
+        color: white
+        border-radius: 50%
+        font-size: 20px
+        top: 17px
+        right: 24px
 
     &.is-open
         display: block
@@ -111,14 +107,3 @@
             right: 16px
             line-height: 25px
             font-size: 20px
-
-@keyframes slideRight
-    0%
-        transform: translateX(-100%)
-    100%
-        transform: translateX(0%)
-@keyframes slideRightOut
-    0%
-        transform: translateX(0%)
-    100%
-        transform: translateX(-100%)

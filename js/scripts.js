@@ -10,9 +10,13 @@ $(document).ready(function () {
             ($(e.target).parents('.language-form').length) ||
             ($(e.target).hasClass('btn-menu')) ||
             ($(e.target).hasClass('language__btn')) ||
+            ($(e.target).hasClass('present')) ||
             ($(e.target).hasClass('cat-item')) ||
             ($(e.target).hasClass('modal-content'))
-        )) { $('body, .nav, .btn-menu, .language-form').removeClass('active'); }
+        )) {
+            $('body, .nav, .btn-menu, .language-form').removeClass('active');
+            hideModals();
+        }
     });
 
     /*---------------------------------------------------end*/
@@ -53,7 +57,7 @@ $(document).ready(function () {
             cardPrice = $('.card__price'),
             cardtValue = $(item).attr('data-product');
 
-        $('[data-product-img').hide();
+        $('[data-product-img]').hide();
         $('[data-product-img="' + cardtValue + '"]').fadeIn();
         $(item).hasClass('label') ? textReplace($(item)) : textReplace($('[for="' + cardtValue + '"]'));
 
@@ -76,19 +80,43 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
 
-    $(document).one('mousemove', function () {
-        let timer;
-        let added = false;
+    setTimeout(() => { $('.present').addClass('active') }, 20000);
 
-        function toggleShowClass() {
-            $('.purchase').toggleClass('active', added = !added);
-            added == false ? $('.purchase').remove() : false;
-        }
-        $(document).on('mousemove', () => {
+    var timer,
+        added = false;
+    function toggleShowClass() {
+        $('.purchase').addClass('active', added = true);
+        setTimeout(() => { $('.purchase').removeClass('active') }, 10000);
+    }
+    $('.purchase__close').on('click', () => { $('.purchase').removeClass('active'); })
+    $(document).on('mousemove', () => {
+        if (!added) {
             clearTimeout(timer);
             timer = setTimeout(toggleShowClass, 10000);
-        });
+        }
     });
+
+    /*---------------------------------------------------end*/
+
+    function hideModals() {
+        $('.modal').fadeOut();
+        $('.modal, body').removeClass('active');
+    };
+
+    $(function () {
+        function showModal(id) {
+            $('body').addClass('active');
+            $(id).fadeIn(300);
+        }
+        $('[data-modal]').on('click', function (e) {
+            e.preventDefault();
+            showModal('#' + $(this).attr("data-modal"));
+        });
+        $('.modal__close, .modal__cancel').on('click', () => { hideModals(); });
+
+    });
+
+
     /*---------------------------------------------------end*/
 
     $('a[href*="#"]').on('click', function (e) {
