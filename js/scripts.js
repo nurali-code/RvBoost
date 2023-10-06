@@ -7,12 +7,20 @@ $(document).ready(function () {
     $(document).on('click', function (e) {
         if (!(($(e.target).parents('.modal-content').length) ||
             ($(e.target).parents('.btn-menu').length) ||
+            ($(e.target).parents('.language-form').length) ||
             ($(e.target).hasClass('btn-menu')) ||
+            ($(e.target).hasClass('language__btn')) ||
             ($(e.target).hasClass('cat-item')) ||
             ($(e.target).hasClass('modal-content'))
-        )) { $('body, .nav, .btn-menu').removeClass('active'); }
+        )) { $('body, .nav, .btn-menu, .language-form').removeClass('active'); }
     });
 
+
+    /*---------------------------------------------------end*/
+
+    $('.language__btn').on('click', function () {
+        $(this).next().toggleClass('active');
+    })
 
     /*---------------------------------------------------end*/
 
