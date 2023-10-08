@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const nav = document.querySelector('.nav');
     btnMenu.addEventListener('click', function () {
         [body, nav, btnMenu].forEach(element => {
-            element.classList.add('active');
+            element.classList.toggle('active');
         });
     });
     // Обработчик события клика вне определенных элементов
