@@ -106,7 +106,7 @@
     &__subheading
         margin-bottom: 24px
 
-@import 'slick'
+@import 'itsSlider'
 
 .products
     overflow: hidden
@@ -119,8 +119,9 @@
 .product
     display: inline-block
     vertical-align: middle
-    margin: 10px
+    // margin: 10px
     width: 265px
+    max-width: 100%
     position: relative
     z-index: 1
     text-align: center
@@ -202,8 +203,18 @@
                 transform: rotate(180deg)
 
     &-content
-        padding: 0 0 16px
-        display: none
+        padding: 0
+        overflow: hidden
+
+        opacity: 0
+        max-height: 0
+        visibility: hidden
+        transition: all ease .4s
+        &.active
+            opacity: 1
+            visibility: visible
+            max-height: 500px
+            padding: 0 0 16px
 
 .review
     width: 46.67%
@@ -445,8 +456,8 @@
             width: 60%
             pointer-events: none
             display: block
-            margin: 0 auto 
-            animation: shake 5s ease infinite 
+            margin: 0 auto
+            animation: shake 5s ease infinite
 
         &.active
             visibility: visible
